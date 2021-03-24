@@ -1,0 +1,9 @@
+#right_sidebar_list li{
+    padding: 10px;
+}
+
+#right_sidebar_list .list_element_checked{
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: var(--app-grey);
+}

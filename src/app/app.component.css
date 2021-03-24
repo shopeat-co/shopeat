@@ -1,0 +1,96 @@
+  @font-face {
+    font-family: Montserrat;
+    src: url('assets/fonts/Montserrat-Regular.ttf') format("truetype");
+  } 
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    gap: 0px 0px;
+    grid-template-areas:
+      "sidebar_left heading heading heading sidebar_right"
+      "sidebar_left grid_elements grid_elements grid_elements sidebar_right"
+      "sidebar_left grid_elements grid_elements grid_elements sidebar_right"
+      "sidebar_left element_info element_info element_info sidebar_right"
+      "sidebar_left footer footer footer sidebar_right";
+  }
+  .grid-container .grid_elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "element_1 element_2 element_3"
+      "element_4 element_5 element_6";
+    height: 57vh;
+    overflow: auto;
+  }
+  .sidebar_right { grid-area: sidebar_right; }
+  .sidebar_left { grid-area: sidebar_left; }
+  .heading { grid-area: heading; }
+  .footer { grid-area: footer; }
+  .grid_elements { grid-area: grid_elements; }
+  .element_2 { grid-area: element_2; }
+  .element_3 { grid-area: element_3; }
+  .element_4 { grid-area: element_4; }
+  .element_5 { grid-area: element_5; }
+  .element_6 { grid-area: element_6; }
+  .element_info { grid-area: element_info; }
+
+  .grid_element:hover{
+     background: var(--app-light-red);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;     
+  }
+
+  #main_wrapper{
+      font-family: Montserrat; 
+  }
+
+  #heading{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  nav.sidebar_left .active{
+    color:#A94745;
+  }
+
+  nav{
+    padding-top: 10vh;
+  }
+
+  div.grid_element{
+      padding: 10px 10px 0px 10px;
+  }
+
+  header,
+  .grid_element.element_1,
+  .grid_element.element_2,
+  .grid_element.element_3{
+    border-bottom: 1px solid var(--app-blue);;
+  }
+
+  .element_info,
+  .grid_element.element_4,
+  .grid_element.element_5,
+  .grid_element.element_6
+  {
+    border-top: 1px solid var(--app-blue);;
+  }
+  .grid_element.element_2,
+  .grid_element.element_5 {
+    border-left:  1px solid var(--app-blue);;
+    border-right: 1px solid var(--app-blue);;
+  }
+  .sidebar_left{
+    border-right: 1px solid var(--app-blue);;
+  }
+  .sidebar_right{
+    border-left: 1px solid var(--app-blue);;
+    padding-left: 3vw;
+  }

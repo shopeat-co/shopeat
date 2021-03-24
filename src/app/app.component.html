@@ -1,0 +1,22 @@
+    
+    <section id="main_wrapper" class="wrapper">
+    <div class="grid-container">
+          <nav class="sidebar_right"><app-main-right-sidebar [curr_shop_list]="curr_shop_list"></app-main-right-sidebar></nav>
+          <nav class="sidebar_left"><app-main-left-sidebar [active_mod_id]="active_mod_id"></app-main-left-sidebar></nav>
+          <header id="heading" class="heading">
+            <app-main-header module_name="{{module_name}}" view_type_name = {{view_type_name}} date_range = {{date_range}}></app-main-header>
+          </header>
+          <section *ngIf="active_mod_id == 1" class="grid_elements">
+            <div *ngFor="let index of grid_index_array" class="grid_element element_{{index}}">
+              <app-main-grid-element [breakfast_list]="breakfast_list" [dinner_list]="dinner_list" [lunch_list]="lunch_list" day={{day_index_array[index]}}></app-main-grid-element>
+            </div>
+          </section>
+          <div id="element_info" class="element_info">
+            <div *ngIf="active_mod_id == 1" >
+              <app-app-grid-info></app-app-grid-info>
+            </div>
+          </div>
+        </div>   
+        <footer id="footer" class="footer"></footer>     
+    </section>    
+<router-outlet></router-outlet>

@@ -1,0 +1,39 @@
+.flex-wrapper{
+    display: flex;
+    justify-content: space-between; 
+}
+.grid_info_wrapper.flex-wrapper{
+    padding: 2vw;
+}
+#cost{
+    font-size: 20px;
+}
+.grid_info_wrapper .grid_info_button{
+    width: 200px;
+    font-weight: 800;
+    color: white;
+    outline: none;
+    border: none;
+    margin: 10px 10px;
+}
+#pdf_button{
+    background: var(--app-red);
+}
+#copy_button{
+    background: var(--app-blue);
+}
+#excel_button{
+    background: var(--app-green);
+}
+
+#copy_button:hover,
+#excel_button:hover,
+#pdf_button:hover{
+    color: var(--app-blue);
+    background: var(--app-light-red);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;  
+}

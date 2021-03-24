@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Montserrat;
+  src: url('./assets/fonts/Montserrat-Regular.ttf');
+}
+
+body{
+  font-family: Montserrat;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "sidebar_right heading heading heading sidebar_left"
+      "sidebar_right element_1 element_2 element_3 sidebar_left"
+      "sidebar_right element_4 element_5 element_6 sidebar_left"
+      "sidebar_right element_info element_info element_info sidebar_left"
+      "sidebar_right footer footer footer sidebar_left";
+  }
+  .sidebar_right { grid-area: sidebar_right; }
+  .sidebar_left { grid-area: sidebar_left; }
+  .heading { grid-area: heading; }
+  .footer { grid-area: footer; }
+  .element_1 { grid-area: element_1; }
+  .element_2 { grid-area: element_2; }
+  .element_3 { grid-area: element_3; }
+  .element_4 { grid-area: element_4; }
+  .element_5 { grid-area: element_5; }
+  .element_6 { grid-area: element_6; }
+  .element_info { grid-area: element_info; }
